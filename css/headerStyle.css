@@ -1,0 +1,6 @@
+header {
+  background-color: rgb(41, 141, 255);
+  height: 50px;
+  flex-shrink: 0;
+  color: white;
+}

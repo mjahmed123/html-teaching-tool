@@ -54,5 +54,8 @@
   font-size: 18px;
   color: rgb(35, 130, 255);
   text-align: center;
-
+  text-decoration: none;
+}
+.hyperlink:hover {
+  text-decoration: underline;
 }

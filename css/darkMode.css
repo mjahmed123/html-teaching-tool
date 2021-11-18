@@ -1,0 +1,14 @@
+body {
+  background: #252525;
+  color: white;
+}
+
+header {
+  background: rgb(25, 109, 177);
+}
+.center-box {
+  background: #353535;
+}
+#theme-button {
+  border: solid 3px black
+}

@@ -6,6 +6,9 @@
       echo link_tag('css/registerLoginStyle.css');
       echo link_tag('css/headerStyle.css');
     ?>
+
+    <script src="<?php echo site_url('js/darkMode.js'); ?>"></script>
+    <script src="<?php echo site_url('js/header.js'); ?>"></script>
     <title>Register - HTML Teaching Tool</title>
   </head>
   <body>

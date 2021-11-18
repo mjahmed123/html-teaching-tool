@@ -1,4 +1,4 @@
-body {
+html, body {
   background: #252525;
   color: white;
 }
@@ -9,6 +9,25 @@ header {
 .center-box {
   background: #353535;
 }
+.center-box .input {
+  background-color: black;
+  color: white;
+}
+.center-box .action-button {
+  background: rgb(25, 109, 177);
+}
+.center-box .action-button:hover {
+  background: rgb(19, 75, 121);
+}
 #theme-button {
   border: solid 3px black
+}
+.home-page .title span{
+  color: white;
+}
+.home-page .description {
+  color: rgb(212, 212, 212);
+}
+.home-page .buttons .button {
+  color: white
 }

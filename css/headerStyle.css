@@ -7,12 +7,36 @@ header {
   flex-shrink: 0;
   color: white;
 }
+header .button {
+  position: relative;
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+header .button:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 10px;
+  background: white;
+}
 .header-title {
   align-self: center;
   font-weight: bold;
   margin-left: 10px;
   font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
 }
+.header-title:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 
 #theme-button {
   position: relative;
@@ -21,9 +45,9 @@ header {
   width: 30px;
   margin-left: auto;
   margin-right: 20px;
-  overflow: hidden;
   cursor: pointer;
   border-radius: 50%;
+  overflow: hidden;
   border: solid 3px white;
 }
 

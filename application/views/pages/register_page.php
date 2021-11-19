@@ -16,11 +16,11 @@
     <div class="container">
       <div class="center-box">
         <div class="title">Register</div>
-          <form action="#">
-            <input class="input" type="text" placeholder="Username">
-            <input class="input" type="email" placeholder="Email">
-            <input class="input" type="password" placeholder="Password">
-            <input class="input" type="password" placeholder="Confirm Password">
+          <form method="post" action="<?php echo base_url(); ?>register/insert">
+            <input class="input" type="text" name="username" placeholder="Username">
+            <input class="input" type="email" name="email" placeholder="Email">
+            <input class="input" type="password" name="password" placeholder="Password">
+            <input class="input" type="password" name="confirm_password" placeholder="Confirm Password">
             <input class="action-button" type="submit" value="Register">
             <a class="hyperlink" href="/login">Already have an account? Login</a>
           </form>

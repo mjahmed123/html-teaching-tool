@@ -10,7 +10,7 @@ header {
   background: #353535;
 }
 .center-box .input {
-  background-color: black;
+  background-color: rgb(32, 32, 32);
   color: white;
 }
 .center-box .action-button {
@@ -20,7 +20,7 @@ header {
   background: rgb(19, 75, 121);
 }
 #theme-button {
-  border: solid 3px black
+  border: solid 3px black;
 }
 .home-page .title span{
   color: white;

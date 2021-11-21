@@ -18,13 +18,13 @@
       <div class="title">Register</div>
       <?php echo isset($user_id) ? '<div>Your account has been successfully created!</div>' : ''  ?>
       <form method="post" action="<?php echo base_url(); ?>register/insert">
-        <input class="input" type="text" name="username" placeholder="Username">
+        <input class="input" type="text" name="username" placeholder="Username" maxlength="15">
             <div class="error"><?php echo isset($validation['username']) ?  $validation['username'] : '' ?></div>
-            <input class="input" type="email" name="email" placeholder="Email">
+            <input class="input" type="email" name="email" placeholder="Email" maxlength="25">
             <div class="error"><?php echo isset($validation['email']) ?  $validation['email'] : '' ?></div>
-            <input class="input" type="password" name="password" placeholder="Password">
+            <input class="input" type="password" name="password" placeholder="Password" maxlength="30">
             <div class="error"><?php echo isset($validation['password']) ?  $validation['password'] : '' ?></div>
-            <input class="input" type="password" name="confirm_password" placeholder="Confirm Password">
+            <input class="input" type="password" name="confirm_password" placeholder="Confirm Password" maxlength="30">
             <div class="error"><?php echo isset($validation['confirm_password']) ?  $validation['confirm_password'] : '' ?></div>
             <input class="action-button" type="submit" value="Register">
             <a class="hyperlink" href="/login">Already have an account? Login</a>

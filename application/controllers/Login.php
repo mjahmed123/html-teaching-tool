@@ -11,38 +11,65 @@ class Login extends CI_Controller {
 	}
 
 	public function authenticate() {
+		$data['validation'] = $this->validate();
+		if (!empty($data['validation'])) {
+			$this->load->view('pages/login_page', $data);
+			return;
+		}
 		$user_id = $this->user_model->authenticate_user();
 		if ($user_id == false) {
 			$data['user_found'] = false;
 			$this->load->view('pages/login_page', $data);
 			return;
 		}
+		$_SESSION["user_id"] = $user_id;
 		redirect('/dashboard', 'refresh');
 	}
 
 	private function validate() {
-		$field_errors = $this->empty_items_in_assoc_array($_POST);
+		$field_errors = $this->validate_fields($_POST);
 		return $field_errors;
 	}
 
-	private function empty_items_in_assoc_array($arr) {
-		$empty_fields = [];
+	private function validate_fields($arr) {
+		$field_errors = [];
 		foreach($arr as $field => $value) {
 
 			if (empty($value)) {
-				$empty_fields[$field] = $field . " is required.";
+				$field_errors[$field] = str_replace("_", " ", ucfirst($field)) . " is required.";
+			}
+			$max_length = $this->field_max_values($field);
+
+			
+			if (strlen($value) > $max_length) {
+				$field_errors[$field] = str_replace("_", " ", ucfirst($field)) . " must be less than " . $max_length . ' characters.';
 			}
 		}
-		return $empty_fields;
+		return $field_errors;
 	}
 
+
+	private function field_max_values($field_name) {
+		switch ($field_name) {
+			case 'email':
+				return 25;
+				break;
+			case 'password':
+				return 30;
+				break;
+			default:
+				break;
+		}
+	}
 
 
 	public function index()
 	{
-    $this->load->helper('html');
-		$this->load->helper('url');
-
+		// check if already logged in.
+		if (isset($_SESSION['user_id'])) {
+			redirect('/dashboard', 'refresh');
+			return;
+		}
 		$this->load->view('pages/login_page');
 	}
 }

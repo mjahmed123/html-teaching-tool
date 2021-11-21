@@ -16,10 +16,12 @@
       <div class="center-box">
         <div class="title">Login</div>
         <form method="post" action="<?php echo base_url(); ?>login/authenticate">
-        <div class="error"><?php echo isset($user_found) && $user_found == false ?  "User not found!" : '' ?></div>
+          <input class="input" type="email" name="email" placeholder="Email" maxlength="25">
+          <div class="error"><?php echo isset($validation['email']) ?  $validation['email'] : '' ?></div>
+          <input class="input" type="password" name="password" placeholder="Password" maxlength="30">
+          <div class="error"><?php echo isset($validation['password']) ?  $validation['password'] : '' ?></div>
 
-          <input class="input" type="email" name="email" placeholder="Email">
-          <input class="input" type="password" name="password" placeholder="Password">
+          <div class="error"><?php echo isset($user_found) && $user_found == false ?  "User not found!" : '' ?></div>
           <input class="action-button" type="submit" value="Login">
           <a class="hyperlink" href="/register">Don't have an account? Create an account</a>
         </form>

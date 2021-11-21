@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<?php 
 		echo link_tag('css/global.css');
-		echo link_tag('css/homeStyle	.css');
+		echo link_tag('css/homeStyle.css');
 		echo link_tag('css/headerStyle.css');
 	?>
 	<script src="<?php echo site_url('js/darkMode.js'); ?>"></script>

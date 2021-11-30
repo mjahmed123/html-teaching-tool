@@ -7,13 +7,9 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('html');
 		$this->load->helper('url');
+		$this->load->model('user_model');
 	}
 
-
-	public function logout() {
-		session_destroy();
-		redirect('/', 'refresh');
-	}
 	public function index()
 	{
 		// redirect to login if not logged in

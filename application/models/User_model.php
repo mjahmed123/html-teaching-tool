@@ -44,6 +44,18 @@ class User_model extends CI_Model {
     }
     return $user->id;
   }
+  public function get_session_user() {
+    $this->db->select('id, username');
+    $this->db->from('users');
+    $this->db->where('id', $_SESSION['user_id']);
+    $query = $this->db->get();
+    $user =  $query->row();
+
+    if (!isset($user)) {
+      return false;
+    }
+    return $user;
+  }
 }
 ?>
 

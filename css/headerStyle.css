@@ -60,3 +60,21 @@ header .button:hover::before {
   right: 0;
   background-color: black;
 }
+.header-profile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+.header-profile .username {
+  font-size: 14px;
+}
+.header-profile .button {
+  opacity: 0.6;
+  margin-top: 0;
+}
+.header-profile .button:hover {
+  opacity: 1;
+}

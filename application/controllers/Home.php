@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	{
     $this->load->helper('html');
 		$this->load->helper('url');
+		$this->load->model('user_model');
 		$this->load->view('pages/home_page');
 	}
 }

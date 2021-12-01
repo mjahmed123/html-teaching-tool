@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: rgb(34, 151, 247);
+  min-height: 40px;
+  flex-shrink: 0;
+  color: white;
+  text-align: center;
+}

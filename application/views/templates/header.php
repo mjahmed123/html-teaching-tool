@@ -3,7 +3,9 @@
     $path = isset($_SESSION["user_id"]) ? '/dashboard' : '/';
     echo '<a class="header-title" href="'. $path .'">HTML Teaching Tool</a>';
   ?> 
-  <div id="theme-button" title="Toggle dark mode"></div>
+  <div class="outer-theme-button">
+    <div id="theme-button"></div>
+  </div>
 
   <?php 
 

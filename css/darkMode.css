@@ -6,6 +6,9 @@ html, body {
 header {
   background: rgb(25, 109, 177);
 }
+footer {
+  background: rgb(25, 109, 177);
+}
 .center-box {
   background: #353535;
 }
@@ -22,6 +25,10 @@ header {
 #theme-button {
   border: solid 3px black;
 }
+.outer-theme-button:hover:before {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
 .home-page .title span{
   color: white;
 }
@@ -30,4 +37,11 @@ header {
 }
 .home-page .buttons .button {
   color: white
+}
+
+.dashboard .category {
+  background: rgba(0, 0, 0, 0.3);
+}
+.dashboard .category:hover {
+  background: rgb(25, 109, 177);
 }

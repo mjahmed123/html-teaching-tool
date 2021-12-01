@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	?>
 	<script src="<?php echo site_url('js/darkMode.js'); ?>"></script>
 	<script src="<?php echo site_url('js/header.js'); ?>"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Teaching Tool</title>
 </head>
 <body>

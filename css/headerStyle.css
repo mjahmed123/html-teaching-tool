@@ -38,13 +38,17 @@ header .button:hover::before {
 }
 
 
+.outer-theme-button {
+  margin-left: auto;
+  margin-right: 20px;
+  position: relative;
+}
+
 #theme-button {
   position: relative;
   background: white;
   height: 30px;
   width: 30px;
-  margin-left: auto;
-  margin-right: 20px;
   cursor: pointer;
   border-radius: 50%;
   overflow: hidden;
@@ -60,6 +64,21 @@ header .button:hover::before {
   right: 0;
   background-color: black;
 }
+
+.outer-theme-button:hover:before {
+  content: 'Toggle Dark Mode';
+  position: absolute;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 80px;
+  right: 0;
+  top: 45px;
+
+}
+
 .header-profile {
   display: flex;
   flex-direction: column;
@@ -68,8 +87,12 @@ header .button:hover::before {
   justify-content: center;
   margin-right: 5px;
 }
+.header-profile .button {
+  margin-right: 0;
+}
 .header-profile .username {
   font-size: 14px;
+  text-align: center;
 }
 .header-profile .button {
   opacity: 0.6;

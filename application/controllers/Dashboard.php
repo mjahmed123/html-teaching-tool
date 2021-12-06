@@ -10,13 +10,21 @@ class Dashboard extends CI_Controller {
 		$this->load->model('user_model');
 	}
 
+	public function tags() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/tags_page');
+	}
+
 	public function index()
 	{
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/dashboard_page');
+	}
+	private function checkIfLoggedIn() {
 		// redirect to login if not logged in
 		if (!isset($_SESSION['user_id'])) {
 			redirect('/login', 'refresh');
 			return;
 		}
-		$this->load->view('pages/dashboard_page');
 	}
 }

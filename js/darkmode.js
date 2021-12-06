@@ -1,8 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
   const isDarkModeEnabled = localStorage.getItem("darkModeEnabled");
 
+  if (isDarkModeEnabled === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    enableDarkTheme();
+    return;
+  }
+
   if (isDarkModeEnabled == "true" ) {
-    enableDarkTheme()
+    enableDarkTheme();
     return;
   } 
   disableDarkTheme();

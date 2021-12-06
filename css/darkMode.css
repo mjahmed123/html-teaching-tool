@@ -2,6 +2,9 @@ html, body {
   background: #252525;
   color: white;
 }
+p {
+  color: rgba(255, 255, 255, 0.8);
+}
 
 header {
   background: rgb(25, 109, 177);
@@ -41,7 +44,34 @@ footer {
 
 .dashboard .category {
   background: rgba(0, 0, 0, 0.3);
+  color: white;
 }
 .dashboard .category:hover {
   background: rgb(25, 109, 177);
+}
+.code,
+code {
+  background: #363636;
+  border: solid 1px #828282; 
+  color: white;
+}
+
+table {
+
+  color: white;
+}
+
+td, th {
+  border: 1px solid rgb(148, 148, 148);
+}
+tr {
+  background-color: #3b3b3b;
+}
+tr:nth-child(2){
+  background-color: #2c2c2c;
+}
+
+th {
+  background-color: rgb(25, 109, 177);
+  color: white;
 }

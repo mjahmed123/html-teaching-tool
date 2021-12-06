@@ -17,12 +17,12 @@
 	<div class="container dashboard">
 		<h1>Select a category:</h1>
 		<div class="categories">
-			<div class="category">Tags</div>
-			<div class="category">Attributes</div>
-			<div class="category">Styles</div>
-			<div class="category">Forms</div>
-			<div class="category">Media</div>
-			<div class="category">References</div>
+			<a href="/dashboard/tags" class="category">Tags</a>
+			<a href="#" class="category">Attributes</a>
+			<a href="#" class="category">Styles</a>
+			<a href="#" class="category">Forms</a>
+			<a href="#" class="category">Media</a>
+			<a href="#" class="category">References</a>
 		</div>
 	</div>
 	<?php $this->load->view('templates/footer'); ?>

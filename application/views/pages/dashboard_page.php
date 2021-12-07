@@ -17,7 +17,7 @@
 	<div class="container dashboard">
 		<h1>Select a category:</h1>
 		<div class="categories">
-			<a href="/dashboard/tags" class="category">Tags</a>
+			<a href="/categories/tags" class="category">Tags</a>
 			<a href="#" class="category">Attributes</a>
 			<a href="#" class="category">Styles</a>
 			<a href="#" class="category">Forms</a>

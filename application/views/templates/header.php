@@ -1,4 +1,4 @@
-<header>
+<header id="header">
   <?php
     $path = isset($_SESSION["user_id"]) ? '/dashboard' : '/';
     echo '<a class="header-title" href="'. $path .'">HTML Teaching Tool</a>';

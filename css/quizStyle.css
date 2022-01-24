@@ -1,0 +1,53 @@
+.container {
+  width: 70%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.code,
+code {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: black;
+  border: solid 1px #404040; 
+}
+.answer {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+#textInput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgb(53, 53, 53);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+#textInput.short {
+  width: 98px;  
+}
+
+#submitButton {
+  align-self: flex-start;
+  border: none;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#submitButton:hover {
+  background: rgb(25, 109, 177);
+}

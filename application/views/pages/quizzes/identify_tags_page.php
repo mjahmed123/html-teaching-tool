@@ -18,6 +18,7 @@
 	<div class="container quiz">
     <form method="post" action="<?php echo base_url(); ?>quizzes/submit?id=1">
       <div class="question" id="question-1">
+        <?php if (isset($answer_status)) {echo $answer_status[1];} ?>
         <p>What is a HTML tag?</p>
 
         <div class="answer">
@@ -35,6 +36,8 @@
       </div>
 
       <div class="question" id="question-2">
+      <?php if (isset($answer_status)) {echo $answer_status[2];} ?>
+
         <p>Which of these have the correct syntax for a 'h1' tag?</p>
 
         <div class="answer">
@@ -52,6 +55,8 @@
       </div>
 
       <div class="question" id="question-3">
+      <?php if (isset($answer_status)) {echo $answer_status[3];} ?>
+
         <p>Complete the syntax of the code given below:</p>
 
         <code class="example">

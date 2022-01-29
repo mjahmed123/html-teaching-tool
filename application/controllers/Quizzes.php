@@ -18,16 +18,20 @@ class Quizzes extends CI_Controller {
 		$user_answers = $this->parse_input();
 
 		$answer_status = array();
+		$correct_answers = array();
 		
 		foreach ($db_answers as $value) {
 			$answer = $value->answer;
 			$question_id = $value->question_id;
-			$answer_id = $value->answer_id;			
+			$answer_id = $value->answer_id;
+			$correct_answers[$question_id] = isset($answer) ? $answer : $answer_id;
 			$user_answer_key = array_search($question_id, array_column($user_answers, 'question_id'));
-			if ($user_answer_key == NULL) {
+
+			if ($user_answer_key < 0) {
 				$answer_status[$question_id] = "missing";
 				continue;
 			}
+
 			$user_answer = $user_answers[$user_answer_key];
 			if ($user_answer["is_input"]) {
 				if ($user_answer["answer"] == $answer) {
@@ -44,6 +48,8 @@ class Quizzes extends CI_Controller {
 			}
 		}
 		$data['answer_status'] = $answer_status;
+		$data['correct_answers'] = $correct_answers;
+
 
 		$this->load->view('pages/quizzes/identify_tags_page', $data);
 	}

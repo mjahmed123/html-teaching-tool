@@ -27,13 +27,17 @@ class Quizzes extends CI_Controller {
 			$correct_answers[$question_id] = isset($answer) ? $answer : $answer_id;
 			$user_answer_key = array_search($question_id, array_column($user_answers, 'question_id'));
 
-			if ($user_answer_key < 0) {
+			if ($user_answer_key === false) {
 				$answer_status[$question_id] = "missing";
 				continue;
 			}
 
 			$user_answer = $user_answers[$user_answer_key];
 			if ($user_answer["is_input"]) {
+				if (empty($user_answer["answer"])) {
+					$answer_status[$question_id] = "missing";
+					continue;
+				}
 				if ($user_answer["answer"] == $answer) {
 					$answer_status[$question_id] = "correct";
 				} else {
@@ -69,7 +73,9 @@ class Quizzes extends CI_Controller {
 
 	public function identify_tags() {
 		$this->checkIfLoggedIn();
-		$this->load->view('pages/quizzes/identify_tags_page');
+		$data['answer_status'] = null;
+		$data['correct_answers'] = null;
+		$this->load->view('pages/quizzes/identify_tags_page', $data);
 	}
 
 

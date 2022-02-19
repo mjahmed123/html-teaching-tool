@@ -17,7 +17,9 @@ code {
   border: solid 1px #404040; 
 
 }
-
+.light-code {
+  color: black;
+}
 
 
 table {

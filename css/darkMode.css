@@ -2,6 +2,32 @@ html, body {
   background: #252525;
   color: white;
 }
+
+.quiz #textInput {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+.quiz #submitButton {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.quiz #submitButton:hover {
+  background: rgb(25, 109, 177);
+}
+.quiz .question { 
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.quiz .answer.correct {
+  background: rgb(13, 175, 62);
+}
+
+
+
+.light-code {
+  color: white;
+}
 p {
   color: rgba(255, 255, 255, 0.8);
 }

@@ -10,9 +10,22 @@
   margin: 20px;
   padding: 10px;
   overflow: hidden;
+  color: black;
+  background-color: white;
 }
 
-.question.correct {
+
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+.link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* .question.correct {
   background-color: rgba(0, 128, 0, 0.3);
 }
 .question.missing {
@@ -20,8 +33,9 @@
 }
 .question.incorrect {
   background-color: rgba(255, 0, 0, 0.3);
-}
+} */
 .question .header {
+  color: white;
   display: flex;
   flex: 1;
   border-radius: 8px;
@@ -61,13 +75,14 @@ code {
   margin-top: 3px;
 }
 .answer.correct {
-  background: green;
+  background: rgb(19, 255, 90);
+  border-radius: 8px;
 }
 #textInput {
   margin-top: 10px;
   margin-bottom: 10px;
-  background: rgb(53, 53, 53);
-  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
   border: none;
   padding: 10px;
   border-radius: 8px;
@@ -80,13 +95,14 @@ code {
   align-self: flex-start;
   border: none;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
+  background: white;
+  color: black;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.2s;
   margin-top: 20px;
 }
 #submitButton:hover {
-  background: rgb(25, 109, 177);
+  background: rgb(34, 151, 247);
+  color: white;
 }

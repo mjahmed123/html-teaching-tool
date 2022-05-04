@@ -16,6 +16,7 @@ h1 {
 }
 .category {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px;
@@ -25,10 +26,22 @@ h1 {
   background: rgba(255, 255, 255, 0.6);
   padding: 5px;
   cursor: pointer;
-  color: black;
+  color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
+}
+.category .material-icons {
+  color: black;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+.category:hover .material-icons{
+  color: white;
 }
 .category:hover {
   background: rgb(34, 151, 247);
   color: white;
+}
+.score {
+  margin-top: 10px;
+  font-size: 24px;
 }

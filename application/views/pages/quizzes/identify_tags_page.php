@@ -35,12 +35,16 @@
         echo $correct_answers[$question_id];
       }
     }
+    function question_number($question_id) {
+      echo $question_id . ". ";
+    }
   ?>
 	<div class="container quiz">
     <form method="post" action="<?php echo base_url(); ?>quizzes/submit?id=1">
+      <!--Question 1-->
       <div class="question <?php output_answer_status($answer_status, 1) ?>" id="question-1">
         <?php create_header($answer_status, 1) ?>
-        <p>What is a HTML tag?</p>
+        <p><?php question_number(1) ?>What is a HTML tag?</p>
 
         <div class="answer <?php output_is_correct_answer($correct_answers, 1, 1) ?>">
           <input type="radio" id="a1" name="q1a1" value="1">
@@ -56,9 +60,10 @@
         </div>
       </div>
 
+      <!--Question 2-->
       <div class="question <?php output_answer_status($answer_status, 2) ?>" id="question-2">
       <?php create_header($answer_status, 2) ?>
-        <p>Which of these have the correct syntax for a 'h1' tag?</p>
+        <p><?php question_number(2) ?>Which of these have the correct syntax for a 'h1' tag?</p>
 
         <div class="answer <?php output_is_correct_answer($correct_answers, 2, 1) ?>">
           <input type="radio" id="a4" name="q2a1" value="1">
@@ -74,15 +79,36 @@
         </div>
       </div>
 
+      <!--Question 3-->
       <div class="question <?php output_answer_status($answer_status, 3) ?>" id="question-3">
       <?php create_header($answer_status, 3) ?>
-        <p>Complete the syntax of the code given below:</p>
+        <p><?php question_number(3) ?>Complete the syntax of the code given below:</p>
 
         <code class="example">
           &lt;p&gt;This is a sample paragraph.<u>&nbsp;&nbsp;&nbsp;</u>
         </code>
         <input value="<?php answer($correct_answers, 3) ?>" id="textInput" class="short " name="q3a1_i" type="text" placeholder="Answer">
       </div>
+
+      <!--Question 4-->
+      <div class="question <?php output_answer_status($answer_status, 4) ?>" id="question-4">
+      <?php create_header($answer_status, 4) ?>
+        <p><?php question_number(4) ?>Which of the following contain all the metadata for a webpage?</p>
+
+        <div class="answer <?php output_is_correct_answer($correct_answers, 4, 1) ?>">
+          <input type="radio" id="a7" name="q4a1" value="1">
+          <label for="a7"><code>&lt;footer&gt;</code></label>
+        </div>
+        <div class="answer <?php output_is_correct_answer($correct_answers, 4, 2) ?>">
+          <input type="radio"id="a8" name="q4a2" value="2">
+          <label for="a8"><code>&lt;body&gt;</code></label> 
+        </div>
+        <div class="answer <?php output_is_correct_answer($correct_answers, 4, 3) ?>">
+          <input type="radio" id="a9" name="q4a3" value="3">
+          <label for="a9"><code>&lt;head&gt;</code></label>
+        </div>
+      </div>
+
       <?php 
         if (isset($correct_answers)) {
           echo '<a class="link" href="'.base_url('index.php/dashboard').'">Back To Dashboard</a>';
@@ -90,7 +116,7 @@
           echo '<input id="submitButton" type="submit" value="Submit">';
         }
       ?>
-      
+
     </form>
   </div>
 	<?php $this->load->view('templates/footer'); ?>

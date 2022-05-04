@@ -18,26 +18,19 @@
 	<div class="container category">
     <h1>Context</h1>
     <div class="context">
-      <a class="link" href="#what_is_a_tag">What is a tag?</a>
-      <a class="link" href="#what_are_comments">What are comments and how do I create a comment?</a>
-      <a class="link" href="#list_of_tags">List of tags</a>
+      <a class="link" href="#what_is_an_attribute">What is an attribute?</a>
+      <a class="link" href="#list_of_attributes">List of attributes</a>
       <a class="link" href="#quizzes_title">Quizzes</a>
     </div>
-		<h2 id="what_is_a_tag">What is a tag?</h2>
-    <p>A tag is a keyword that is used to describe the format of a webpage and its content displayed to a browser. It usually follows a consistent syntax of beginning with an opening angular bracket <code>&lt;</code> and closing angular bracket <code>&gt;</code> to denote where the tag begins and ends.</p>
+		<h2 id="what_is_an_attribute">What is an attribute?</h2>
+    <p>An attribute is a value that is specified within an element's start tag after it's tag name. It provides additional information about an element and usually follows a name/value standard. You can use attributes within any and as many tags as you want.</p>
 		<h3>Example:</h3>
     <code style="color: #33aaff;">
-      &lt;h1&gt;<span class="light-code">This is an example header using the h1 tag.</span>&lt;/h1&gt;
+      &lt;a  <span style="color: #8bdcfc">href=<span style="color: #ff8c00">"/"</span></span>&gt;<span class="light-code">Visit HTML Teaching Tool</span>&lt;/a&gt;
     </code>
     <h3>Output:</h3>
-    <h1 class="code">This is an example header using the h1 tag.<h1>
-    <h2 id="what_are_comments">What are comments and how do I create a comment?</h2>
-    <p>Comments are descriptions that are used to indicate what a piece of code does. Webpages are able to distinguish between comments and actual code and won't affect the output of the webpage. In order to create a comment, add <code>&lt;!--</code> at the beginning of your comment and <code>--&gt;</code> at the end of your comment.</p>
-    <h3>Example:</h3>
-    <code style="color: #2cde5f;">
-      &lt;!-- This is an example comment. --&gt;
-    </code>
-    <h2 id="list_of_tags">List of tags:</h2>
+    <a href="/" style="color: #6189ff">Visit HTML Teaching Tool</a>
+    <h2 id="list_of_attributes">List of attributes:</h2>
     <table>
       <tr>
         <th>Tag</th>
@@ -74,10 +67,10 @@
     </table>
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
-      <a href="/quizzes/identify_tags">Identifying tags and their structure</a>
+      <a href="/quizzes/identify_tags">Identifying and defining atttributes within elements</a>
     </div>
     <a href="#header" class="link">Back To Top</a>
-    <a href="/categories/attributes" class="link bordered" > Next Category (Attributes)</a>
+    <a href="/categories/styles" class="link bordered" > Next Category (Styles)</a>
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>

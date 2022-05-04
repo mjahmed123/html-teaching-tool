@@ -15,3 +15,6 @@ INSERT INTO quizzes (quiz_id, question_id, answer_id) VALUES (1, 2, 1);
 
 -- Complete the syntax of the code given below
 INSERT INTO quizzes (quiz_id, question_id, answer) VALUES (1, 3, "</p>");
+
+-- Which of the following contain all the metadata for a webpage?
+INSERT INTO quizzes (quiz_id, question_id, answer_id) VALUES (1, 4, 3);

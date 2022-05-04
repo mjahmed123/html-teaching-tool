@@ -24,10 +24,6 @@ html, body {
 }
 
 
-
-.light-code {
-  color: white;
-}
 p {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -52,8 +48,13 @@ footer {
   background: rgb(19, 75, 121);
 }
 #theme-button {
-  border: solid 3px black;
+  background-color: black;
+  box-shadow: inset 0px 0px 0px 3px white;
 }
+#theme-button:before {
+  background: white;
+}
+
 .outer-theme-button:hover:before {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -65,15 +66,20 @@ footer {
   color: rgb(212, 212, 212);
 }
 .home-page .buttons .button {
-  color: white
+  color: rgb(255, 255, 255)
 }
 
 .dashboard .category {
   background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dashboard .category .material-icons {
   color: white;
 }
 .dashboard .category:hover {
   background: rgb(25, 109, 177);
+  color: white;
 }
 
 .link {
@@ -84,11 +90,11 @@ footer {
 }
 .category .quizzes a {
   background: rgba(0, 0, 0, 0.3);
-  padding: 10px;
   color: white;
   text-decoration: none;
   border-radius: 8px;
 }
+
 .category .quizzes a:hover {
   background: rgb(25, 109, 177);
   color: white;

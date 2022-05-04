@@ -8,17 +8,14 @@ p {
 }
 .code,
 code {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 4px;
-  padding: 4px;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: black;
-  border: solid 1px #404040; 
-
+  background: #363636;
+  border: solid 1px #828282; 
+  color: white;
+  padding: 3px;
 }
+
 .light-code {
-  color: black;
+  color: white;
 }
 
 
@@ -47,6 +44,8 @@ tr:nth-child(even){
 .quizzes a {
   background: white;
   padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: black;
   text-decoration: none;
   border-radius: 8px;

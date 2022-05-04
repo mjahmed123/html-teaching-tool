@@ -9,18 +9,31 @@ class Quizzes extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('user_model');
 		$this->load->model('quiz_model');
+		$this->load->model('completed_quizzes_model');
 	}
 
 
 	public function submit() {
 		$quiz_id = $_GET["id"];
+
+		$quizCount = $this->completed_quizzes_model->getCountByUserId($_SESSION['user_id'], $quiz_id);
+
+    if ($quizCount >= 3) {
+      echo "<script>alert('You can only attempt this quiz a maximum of three times!'); history.go(-2);</script>";
+      return;
+    }
 		$db_answers = $this->quiz_model->get_questions_by_quiz_id($quiz_id);
 		$user_answers = $this->parse_input();
 
 		$answer_status = array();
 		$correct_answers = array();
 		
+		$total = 0;
+		$total_correct = 0;
+		
+		
 		foreach ($db_answers as $value) {
+			$total = $total + 1;
 			$answer = $value->answer;
 			$question_id = $value->question_id;
 			$answer_id = $value->answer_id;
@@ -39,6 +52,7 @@ class Quizzes extends CI_Controller {
 					continue;
 				}
 				if ($user_answer["answer"] == $answer) {
+					$total_correct = $total_correct + 1;
 					$answer_status[$question_id] = "correct";
 				} else {
 					$answer_status[$question_id] = "incorrect";
@@ -46,11 +60,16 @@ class Quizzes extends CI_Controller {
 				continue;
 			}
 			if ($user_answer["answer"] == $answer_id) {
+				$total_correct = $total_correct + 1;
 				$answer_status[$question_id] = "correct";
 			} else {
 				$answer_status[$question_id] = "incorrect";
 			}
 		}
+		$score = $total_correct . "/" . $total;
+
+		$this->completed_quizzes_model->insert($quiz_id, 0, $score);
+
 		$data['answer_status'] = $answer_status;
 		$data['correct_answers'] = $correct_answers;
 

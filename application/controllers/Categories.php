@@ -14,6 +14,26 @@ class Categories extends CI_Controller {
 		$this->checkIfLoggedIn();
 		$this->load->view('pages/categories/tags_page');
 	}
+	public function attributes() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/attributes_page');
+	}
+	public function styles() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/styles_page');
+	}
+	public function forms() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/forms_page');
+	}
+	public function media() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/media_page');
+	}
+	public function references() {
+		$this->checkIfLoggedIn();
+		$this->load->view('pages/categories/references_page');
+	}
 
 
 	private function checkIfLoggedIn() {

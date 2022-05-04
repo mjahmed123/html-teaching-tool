@@ -52,7 +52,11 @@ header .button:hover::before {
   cursor: pointer;
   border-radius: 50%;
   overflow: hidden;
+  
   border: solid 3px white;
+  border: none !important;
+
+  box-shadow: inset 0px 0px 0px 3px black;
 }
 
 #theme-button:before {

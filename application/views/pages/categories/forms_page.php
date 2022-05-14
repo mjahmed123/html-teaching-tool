@@ -53,9 +53,9 @@
             <h2 style="text-align: center; text-decoration: underline">Example Form</h2>
             <h3 style="text-decoration: underline">Name</h3>
             <label for="name">Your full name:</label>
-              <input type="text" name="name" id="name">
+              <input style="width: 85%; margin-right: 20px; max-width: 180px" type="text" name="name" id="name">
 
-            <div style="display: inline-block; margin-top: 10px">
+            <div style="display: block; margin-top: 10px">
               <h3 style="text-decoration: underline">Gender</h3>
               <label for="">Select your gender:</label>
 

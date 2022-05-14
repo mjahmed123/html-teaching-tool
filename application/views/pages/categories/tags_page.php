@@ -6,10 +6,13 @@
 		echo link_tag('css/headerStyle.css');
 		echo link_tag('css/footerStyle.css');
 		echo link_tag('css/categoryStyle.css');
+    echo link_tag('css/atom-one-dark.min.css');
 
 	?>
 	<script src="<?php echo site_url('js/darkMode.js'); ?>"></script>
 	<script src="<?php echo site_url('js/header.js'); ?>"></script>
+  <script src="<?php echo site_url('js/highlight.min.js'); ?>"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Teaching Tool</title>
 </head>
@@ -25,10 +28,10 @@
     </div>
 		<h2 id="what_is_a_tag">What is a tag?</h2>
     <p>A tag is a keyword that is used to describe the format of a webpage and its content displayed to a browser. It usually follows a consistent syntax of beginning with an opening angular bracket <code>&lt;</code> and closing angular bracket <code>&gt;</code> to denote where the tag begins and ends.</p>
-		<h3>Example:</h3>
-    <code style="color: #33aaff;">
-      &lt;h1&gt;<span class="light-code">This is an example header using the h1 tag.</span>&lt;/h1&gt;
-    </code>
+		
+    <h3>Example:</h3>
+    <pre><code style="margin: 0; padding: 10px; display: flex; flex-direction: row; flex-wrap: wrap" class="light-code language-html">&lt;h1&gt;This is an example header using the h1 tag.&lt;/h1&gt;</code></pre>
+
     <h3>Output:</h3>
     <h1 class="code">This is an example header using the h1 tag.<h1>
     <h2 id="what_are_comments">What are comments and how do I create a comment?</h2>
@@ -81,6 +84,10 @@
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>
+
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
 </html>
 

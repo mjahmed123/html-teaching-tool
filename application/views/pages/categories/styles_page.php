@@ -6,10 +6,13 @@
 		echo link_tag('css/headerStyle.css');
 		echo link_tag('css/footerStyle.css');
 		echo link_tag('css/categoryStyle.css');
+    echo link_tag('css/atom-one-dark.min.css');
 
 	?>
 	<script src="<?php echo site_url('js/darkMode.js'); ?>"></script>
 	<script src="<?php echo site_url('js/header.js'); ?>"></script>
+  <script src="<?php echo site_url('js/highlight.min.js'); ?>"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Teaching Tool</title>
 </head>
@@ -36,40 +39,33 @@
     <p>Internal Styling is when you define the properties of elements, classes and id's inside a <code>&lt;style&gt;</code> tag. You can do this using selectors which are usually the names of the elements, classes and id's names.</p>
 
     <h3>Example:</h3>
-    <code style="display: inline-block; width: 80%">
-      <div style="color: #33aaff">&lt;style&gt;</div>
-        <div style="margin-left: 10px; color: orange">body, html <spa style="color: white">{</span></div>
-          <div style="margin-left: 20px">margin: 0;</div>
-          <div style="margin-left: 20px">background-color: <span style="color: orange">grey</span>;</div>
-        <div style="margin-left: 10px">}</div>
-        
-        <div style="display: inline-block"></div>
-        
-        <div style="margin-left: 10px">h1 {</div>
-          <div style="margin-left: 20px">color: white;</div>
-          <div style="margin-left: 20px">text-align: center;</div>
-          <div style="margin-left: 20px">font-family: Arial;</div>
-        <div style="margin-left: 10px">}</div>
-      <div style="color: #33aaff">&lt;/style&gt;</div>
-    </code>
+    <pre><code class="language-html">&lt;style&gt;
+  <code class="language-css">body, html {
+    margin: 0;
+    background-color: grey;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    font-family: Arial;
+  }
+</code>&lt;/style&gt;</code></pre>
 
     <h3 id="external_styling">External Styling</h3>
     <p>External Styling is when you separate your style selectors and properties into their own file to keep the code separate from the main HTML code, which helps with both organisation and clarity of code.</p>
     
     <h3>Example:</h3>
-    <code style="display: inline-block; width: 80%">
-      <div>&lt;head&gt;</div>
-      <div style="margin-left: 10px">&lt;link rel="stylesheet" href="main.css"&gt;</div>
-      <div>&lt;/head&gt;</div>
-    </code>
+    <pre><code style="margin: 0; padding: 10px" class="language-html">&lt;head&gt; 
+  &lt;link rel="stylesheet" href="main.css"&gt; 
+&lt;/head&gt;</code></pre>
 
     <h3 id="inline_styling">Inline Styling</h3>
     <p>Inline Styling is when you define the selector and properties of elements, classes and id's within the same line of a tag. It is usually defined with the style attribute and is usually enclosed within <code>""</code>.</p>
     
     <h3>Example:</h3>
-    <code style="display: inline-block; width: 100%">
-      <div>&lt;p style="font-style: italic; font-weight: bold"&gt;<div>This is an exmaple paragraph with a bold and italic font style.&lt;/p&gt;</div></div>
-    </code>
+    <pre><code class="language-html">&lt;p style="font-style: italic; font-weight: bold"&gt;
+This is an example paragraph with a bold and italic font style.&lt;/p&gt;</code></pre>
 
     <h3>Output:</h3>
     <code style="display: inline-block; width: 80%">
@@ -120,6 +116,10 @@
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>
+
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
 </html>
 

@@ -6,10 +6,13 @@
 		echo link_tag('css/headerStyle.css');
 		echo link_tag('css/footerStyle.css');
 		echo link_tag('css/categoryStyle.css');
+    echo link_tag('css/atom-one-dark.min.css');
 
 	?>
 	<script src="<?php echo site_url('js/darkMode.js'); ?>"></script>
 	<script src="<?php echo site_url('js/header.js'); ?>"></script>
+  <script src="<?php echo site_url('js/highlight.min.js'); ?>"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>HTML Teaching Tool</title>
 </head>
@@ -24,10 +27,10 @@
     </div>
 		<h2 id="what_is_an_attribute">What is an attribute?</h2>
     <p>An attribute is a value that is specified within an element's start tag after it's tag name. It provides additional information about an element and usually follows a name/value standard. You can use attributes within any and as many tags as you want.</p>
-		<h3>Example:</h3>
-    <code style="color: #33aaff;">
-      &lt;a  <span style="color: #8bdcfc">href=<span style="color: #ff8c00">"/"</span></span>&gt;<span class="light-code">Visit HTML Teaching Tool</span>&lt;/a&gt;
-    </code>
+		
+    <h3>Example:</h3>
+    <pre><code style="margin: 0; padding: 10px" class="language-html">&lt;a href="/"&gt;Visit the HTML Teaching Tool website.&lt;/a&gt;</code></pre>
+
     <h3>Output:</h3>
     <a href="/" style="color: #6189ff">Visit HTML Teaching Tool</a>
     <h2 id="list_of_attributes">List of attributes:</h2>
@@ -67,13 +70,17 @@
     </table>
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
-      <a href="/quizzes/identify_tags">Identifying and defining atttributes within elements</a>
+      <a href="/quizzes/identify_attributes">Identifying and defining atttributes within elements</a>
     </div>
     <a href="#header" class="link">Back To Top</a>
     <a href="/categories/styles" class="link bordered" > Next Category (Styles)</a>
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>
+
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
 </html>
 

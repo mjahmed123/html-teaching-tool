@@ -13,7 +13,15 @@ class Quizzes extends CI_Controller {
 	}
 
 
-	public function submit() {
+	public function submit_tags() {
+		$this->submit('pages/quizzes/identify_tags_page', 0);
+	}
+	public function submit_attributes() {
+		$this->submit('pages/quizzes/identify_attributes_page', 1);
+	}
+
+
+	private function submit($path, $category_id) {
 		$quiz_id = $_GET["id"];
 
 		$quizCount = $this->completed_quizzes_model->getCountByUserId($_SESSION['user_id'], $quiz_id);
@@ -68,13 +76,13 @@ class Quizzes extends CI_Controller {
 		}
 		$score = $total_correct . "/" . $total;
 
-		$this->completed_quizzes_model->insert($quiz_id, 0, $score);
+		$this->completed_quizzes_model->insert($quiz_id, $category_id, $score);
 
 		$data['answer_status'] = $answer_status;
 		$data['correct_answers'] = $correct_answers;
 
 
-		$this->load->view('pages/quizzes/identify_tags_page', $data);
+		$this->load->view($path, $data);
 	}
 
 	private function parse_input() {
@@ -95,6 +103,13 @@ class Quizzes extends CI_Controller {
 		$data['answer_status'] = null;
 		$data['correct_answers'] = null;
 		$this->load->view('pages/quizzes/identify_tags_page', $data);
+	}
+
+	public function identify_attributes() {
+		$this->checkIfLoggedIn();
+		$data['answer_status'] = null;
+		$data['correct_answers'] = null;
+		$this->load->view('pages/quizzes/identify_attributes_page', $data);
 	}
 
 

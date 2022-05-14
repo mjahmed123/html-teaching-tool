@@ -86,7 +86,8 @@ class Quizzes extends CI_Controller {
 	}
 
 	private function parse_input() {
-		// q3a1_i
+		// q3_i
+		// q3
 		$answers = array();
 		foreach ($_POST as $key => $value) {
 			$answer = array();

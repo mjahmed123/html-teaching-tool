@@ -47,15 +47,15 @@
         <p><?php question_number(1) ?>What is an attribute in HTML?</p>
 
         <div class="answer <?php output_is_correct_answer($correct_answers, 1, 1) ?>">
-          <input type="radio" id="a1" name="q1a1" value="1">
+          <input type="radio" id="a1" name="q1" value="1">
           <label for="a1">A quality regarded as a characteristic of someone or something.</label>
         </div>
         <div class="answer <?php output_is_correct_answer($correct_answers, 1, 2) ?>">
-          <input type="radio" id="a2" name="q1a2" value="2">
+          <input type="radio" id="a2" name="q1" value="2">
           <label for="a2">An attribute is a value that is specified within an element's start tag after it's tag name.</label> 
         </div>
         <div class="answer <?php output_is_correct_answer($correct_answers, 1, 3) ?>">
-          <input type="radio" id="a3" name="q1a3" value="3">
+          <input type="radio" id="a3" name="q1" value="3">
           <label for="a3">Something that is regarding as being caused by someone or something.</label>
         </div>
       </div>
@@ -66,15 +66,15 @@
         <p><?php question_number(2) ?>Which of the following correctly define the <code>href</code> attribute in an <code>&lt;a&gt;</code> tag?</p>
 
         <div class="answer <?php output_is_correct_answer($correct_answers, 2, 1) ?>">
-          <input type="radio" id="a4" name="q2a1" value="1">
+          <input type="radio" id="a4" name="q2" value="1">
           <label for="a4"><code>&lt;a href-"https://www.google.co.uk"&gt;Example Link&lt;/a&gt;</code></label>
         </div>
         <div class="answer <?php output_is_correct_answer($correct_answers, 2, 2) ?>">
-          <input type="radio"id="a5" name="q2a2" value="2">
+          <input type="radio"id="a5" name="q2" value="2">
           <label for="a5"><code>&lt;a "https://www.google.co.uk"&gt;Example Link&lt;/a&gt;</code></label> 
         </div>
-        <div class="answer <?php output_is_correct_answer($correct_answers, 3, 3) ?>">
-          <input type="radio" id="a6" name="q2a3" value="3">
+        <div class="answer <?php output_is_correct_answer($correct_answers, 2, 3) ?>">
+          <input type="radio" id="a6" name="q2" value="3">
           <label for="a6"><code>&lt;a href="https://www.google.co.uk"&gt;Example Link&lt;/a&gt;</code></label>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <code class="example">
           &lt;img src="image.png" width="<u>&nbsp;&nbsp;</u>" height="450"&gt;
         </code>
-        <input value="<?php answer($correct_answers, 3) ?>" id="textInput" class="short " name="q3a1_i" type="text" placeholder="Answer">
+        <input value="<?php answer($correct_answers, 3) ?>" id="textInput" class="short " name="q3_i" type="text" placeholder="Answer">
       </div>
 
       <!--Question 4-->
@@ -96,15 +96,15 @@
         <p><?php question_number(4) ?>What standard does an attribute follow?</p>
 
         <div class="answer <?php output_is_correct_answer($correct_answers, 4, 1) ?>">
-          <input type="radio" id="a7" name="q4a1" value="1">
+          <input type="radio" id="a7" name="q4" value="1">
           <label for="a7">Driver/Navigator</label>
         </div>
         <div class="answer <?php output_is_correct_answer($correct_answers, 4, 2) ?>">
-          <input type="radio"id="a8" name="q4a2" value="2">
+          <input type="radio"id="a8" name="q4" value="2">
           <label for="a8">Ping-Pong</label> 
         </div>
         <div class="answer <?php output_is_correct_answer($correct_answers, 4, 3) ?>">
-          <input type="radio" id="a9" name="q4a3" value="3">
+          <input type="radio" id="a9" name="q4" value="3">
           <label for="a9">Name/Value</label>
         </div>
       </div>

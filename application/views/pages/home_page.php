@@ -17,10 +17,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php $this->load->view('templates/header'); ?>
 	<div class="container home-page">
 		<div class="title">&lt; <span>HTML Teaching Tool</span> /&gt;</div>
-		<div class="description">Learn the fundamental languages for developing websites.</div>
+		<div class="description">Learn the fundamental language for developing websites.</div>
 		<div class="buttons">
 			<a class="button start-button" href="/register">Get Started!</a>
-			<a class="button" href="/register">Learn More!</a>
+			<a class="button" href="/references">Learn More!</a>
 		</div>
 	</div>
 </body>

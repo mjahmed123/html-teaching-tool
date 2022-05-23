@@ -19,6 +19,15 @@ class Quizzes extends CI_Controller {
 	public function submit_attributes() {
 		$this->submit('pages/quizzes/identify_attributes_page', 1);
 	}
+	public function submit_styles() {
+		$this->submit('pages/quizzes/identify_styles_page', 2);
+	}
+	public function submit_forms() {
+		$this->submit('pages/quizzes/identify_forms_page', 3);
+	}
+	public function submit_media() {
+		$this->submit('pages/quizzes/identify_media_page', 4);
+	}
 
 
 	private function submit($path, $category_id) {
@@ -111,6 +120,27 @@ class Quizzes extends CI_Controller {
 		$data['answer_status'] = null;
 		$data['correct_answers'] = null;
 		$this->load->view('pages/quizzes/identify_attributes_page', $data);
+	}
+
+	public function identify_styles() {
+		$this->checkIfLoggedIn();
+		$data['answer_status'] = null;
+		$data['correct_answers'] = null;
+		$this->load->view('pages/quizzes/identify_styles_page', $data);
+	}
+
+	public function identify_forms() {
+		$this->checkIfLoggedIn();
+		$data['answer_status'] = null;
+		$data['correct_answers'] = null;
+		$this->load->view('pages/quizzes/identify_forms_page', $data);
+	}
+
+	public function identify_media() {
+		$this->checkIfLoggedIn();
+		$data['answer_status'] = null;
+		$data['correct_answers'] = null;
+		$this->load->view('pages/quizzes/identify_media_page', $data);
 	}
 
 

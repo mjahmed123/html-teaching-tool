@@ -103,6 +103,18 @@ footer {
   border-left: solid 1px white;
 }
 
+.category .category_score {
+  background: black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.category:hover .category_score {
+  background: black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
 .code,
 code {
   background: #363636;

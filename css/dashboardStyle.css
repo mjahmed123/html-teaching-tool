@@ -45,3 +45,16 @@ h1 {
   margin-top: 10px;
   font-size: 24px;
 }
+
+.category .category_score {
+  /*background: rgb(25, 107, 199);*/
+  background: black;
+  border-radius: 6px;
+  padding: 3px;
+}
+
+.category:hover .category_score {
+  background: white;
+  border-radius: 6px;
+  padding: 3px;
+}

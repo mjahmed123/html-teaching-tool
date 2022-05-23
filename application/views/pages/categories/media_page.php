@@ -21,11 +21,13 @@
 	<div class="container category">
     <h1>Context</h1>
     <div class="context">
-      <a class="link" href="#what_is_an_attribute">What is an attribute?</a>
-      <a class="link" href="#list_of_attributes">List of attributes</a>
+      <a class="link" href="#what_is_an_multimedia">What is an multimedia?</a>
+      <a class="link" href="#how_does_it_work">How does it work?</a>
+      <a class="link" href="#browser_support">Browser support</a>
+      <a class="link" href="#list_of_media_attributes">List of media attributes</a>
       <a class="link" href="#quizzes_title">Quizzes</a>
     </div>
-		<h2 id="what_is_an_attribute">What is multimedia?</h2>
+		<h2 id="what_is_an_multimedia">What is multimedia?</h2>
     <p>Multimedia is any type of media that is audible and visible in several different formats, such as: <span style="font-weight: bold">images, sounds, videos, films, animation</span> etc. Web pages can consist of multiple multimedia elements in the several types and formats.</p>
 		
     <h3>Example:</h3>
@@ -51,47 +53,104 @@
   &autoplay=1&loop=1"&gt;
 &lt;/iframe&gt;</code></pre>
 
-    <h2 id="list_of_attributes">List of attributes:</h2>
+    <h4 id="how_does_it_work">How does it work?</h4>
+    <h4 style="text-decoration: underline">Video</h4>
+    <ul style="list-style-type: circle; margin-left: -10px">
+      <li><p>The <code>video</code> tag is used to embed content of the video media type within a webpage/document.</p></li>
+      <li><p>In this instance, it will display a video with a size of 250 x 400. Whereby, the controls are displayed and the video automatically played while being muted.</p></li>
+    </ul>
+
+    <h4 style="text-decoration: underline">Audio</h4>
+    <ul style="list-style-type: circle; margin-left: -10px">
+      <li><p>The <code>audio</code> tag is used to play a track or something audible.</p></li>
+      <li><p>In this instance, it will play the audio, whereby, the controls are displayed and the video automatically played while being muted</p></li>
+    </ul>
+
+    <h4 style="text-decoration: underline">Iframe</h4>
+    <ul style="list-style-type: circle; margin-left: -10px">
+      <li><p>The <code>iframe</code> tag is used to load another webpage within the same document.</p></li>
+      <li><p>In this instance, it will load the <code>YouTube</code> video within the webpage. The video will show the controls, be automatically played and muted, whilst also being looped once the video has ended.</p></li>
+      <li><p>In order to set these properties, you can change the value in the URL from <code>1</code> to <code>0</code> to disable them. By default, all values are <code>0</code>.</p></li>
+    </ul>
+
+<h2 id="browser_support">Browser Support:</h2>
     <table>
       <tr>
-        <th>Tag</th>
+        <th>Browser</th>
+        <th>Supported</th>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Edge</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Firefox</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Internet Explorer</td>
+        <td>IE 9 and higher</td>
+      </tr>
+    </table>
+
+    <h2 id="list_of_media_attributes">List of media attributes:</h2>
+    <table>
+    <tr>
+        <th>Attribute</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>html</td>
-        <td>Root element of a html document and has all other tags contained within it.</td>
+        <td>autoplay</td>
+        <td>Attribute used to define whether to play the media or not as soon as it has loaded.</td>
       </tr>
       <tr>
-        <td>head</td>
-        <td>Contains the metadata of a webpage (not displayed to the user), data such as: title, character sets, styles etc.</td>
+        <td>controls</td>
+        <td>Attribute used to define whether the media should display controls or not.</td>
       </tr>
       <tr>
-        <td>header</td>
-        <td>Contains information as an introduction to the webpage or is more typically to include the navigation menu of the webpage.</td>
+        <td>currentTime</td>
+        <td>Attribute used to define or get the current playback time of the media in seconds.</td>
       </tr>
       <tr>
-        <td>body</td>
-        <td>Element where all other tags are enclosed between the starting and closing tags, some of which can be found in this table (i.e. paragraphs, tables, hyperlinks, images etc).</td>
+        <td>duration</td>
+        <td>Attribute used to define the length of the media in seconds.</td>
       </tr>
       <tr>
-        <td>footer</td>
-        <td>Element used to indicate the end of the document and usually contains copyright, authorship and contact information.</td>
+        <td>loop</td>
+        <td>Attribute used to define whether a media should restart once the media has finished playing.</td>
       </tr>
       <tr>
-        <td>title</td>
-        <td>Element used to define the title of the webpage that can be viewed on the web browser's tab bar title. This is also used when searching for the website in a search engine in its results page.</td>
+        <td>muted</td>
+        <td>Attribute used to define whether or not the media should have no volume by default as soon as the media has loaded.</td>
       </tr>
       <tr>
-        <td>meta</td>
-        <td>Contains information about data, such as: title, character sets etc. This is usually located within the head tag.</td>
+        <td>paused</td>
+        <td>Attribute used to define whether or not the media should be stopped at its current playback time in seconds.</td>
       </tr>
     </table>
+
+    <div style="margin-top: 5px">
+      <a href="/categories/references#list_of_media_attributes" class="link">View more...</a>
+    </div>
+
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
-      <a href="/quizzes/identify_tags">Identifying and defining atttributes within elements</a>
+      <a href="/quizzes/identify_media">Identifying types of media and how to use them</a>
     </div>
-    <a href="#header" class="link">Back To Top</a>
-    <a href="/categories/references" class="link bordered" > Next Category (References)</a>
+
+    <div style="display: flex; flex-wrap: wrap">
+      <a style="margin-right: 5px" href="#header" class="link">Back To Top</a>
+      <a href="/categories/forms" class="link bordered">Previous Category (Forms)</a>
+      <a style="margin-left: auto" href="/categories/references" class="link">Next Category (References)</a>
+    </div>
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>

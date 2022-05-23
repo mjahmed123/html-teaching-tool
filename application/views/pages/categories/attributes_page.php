@@ -22,6 +22,7 @@
     <h1>Context</h1>
     <div class="context">
       <a class="link" href="#what_is_an_attribute">What is an attribute?</a>
+      <a class="link" href="#browser_support">Browser support</a>
       <a class="link" href="#list_of_attributes">List of attributes</a>
       <a class="link" href="#quizzes_title">Quizzes</a>
     </div>
@@ -33,48 +34,87 @@
 
     <h3>Output:</h3>
     <a href="/" style="color: #6189ff">Visit HTML Teaching Tool</a>
-    <h2 id="list_of_attributes">List of attributes:</h2>
+
+    <h2 id="browser_support">Browser Support:</h2>
     <table>
       <tr>
-        <th>Tag</th>
+        <th>Browser</th>
+        <th>Supported</th>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Edge</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Firefox</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Internet Explorer</td>
+        <td>IE 9 and higher</td>
+      </tr>
+    </table>
+
+    <h2 id="list_of_attributes">List of attributes:</h2>
+    <table>
+    <tr>
+        <th>Attribute</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>html</td>
-        <td>Root element of a html document and has all other tags contained within it.</td>
+        <td>class</td>
+        <td>Attribute used to specify an elements classname(s) which can be used as a reference in an external stylesheet.</td>
       </tr>
       <tr>
-        <td>head</td>
-        <td>Contains the metadata of a webpage (not displayed to the user), data such as: title, character sets, styles etc.</td>
+        <td>id</td>
+        <td>Attribute used to define a unique identification for an element which can be used as a reference to an external stylesheet.</td>
       </tr>
       <tr>
-        <td>header</td>
-        <td>Contains information as an introduction to the webpage or is more typically to include the navigation menu of the webpage.</td>
+        <td>href</td>
+        <td>Attribute used to define a page URL, whereby a link should go that specific page.</td>
       </tr>
       <tr>
-        <td>body</td>
-        <td>Element where all other tags are enclosed between the starting and closing tags, some of which can be found in this table (i.e. paragraphs, tables, hyperlinks, images etc).</td>
+        <td>height</td>
+        <td>Attribute used to specify the height of an element (how tall it is).</td>
       </tr>
       <tr>
-        <td>footer</td>
-        <td>Element used to indicate the end of the document and usually contains copyright, authorship and contact information.</td>
+        <td>width</td>
+        <td>Attribute used to specify the width of an element (how narrow or wide it is).</td>
       </tr>
       <tr>
         <td>title</td>
-        <td>Element used to define the title of the webpage that can be viewed on the web browser's tab bar title. This is also used when searching for the website in a search engine in its results page.</td>
+        <td>Attribute used to specify any extra data/information about an element or a tag.</td>
       </tr>
       <tr>
-        <td>meta</td>
-        <td>Contains information about data, such as: title, character sets etc. This is usually located within the head tag.</td>
+        <td>name</td>
+        <td>Attribute used to define an elements name and can be used to refer to the element when passing the input data from it to a server for proccessing.</td>
       </tr>
     </table>
+
+    <div style="margin-top: 5px">
+      <a href="/categories/references#list_of_attributes" class="link">View more...</a>
+    </div>
+
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
       <a href="/quizzes/identify_attributes">Identifying and defining atttributes within elements</a>
     </div>
-    <a href="#header" class="link">Back To Top</a>
-    <a href="/categories/styles" class="link bordered" > Next Category (Styles)</a>
 
+    <div style="display: flex; flex-wrap: wrap">
+      <a style="margin-right: 5px" href="#header" class="link">Back To Top</a>
+      <a href="/categories/tags" class="link bordered">Previous Category (Tags)</a>
+      <a style="margin-left: auto" href="/categories/styles" class="link">Next Category (Styles)</a>
+    </div>
+    
+    
   </div>
 	<?php $this->load->view('templates/footer'); ?>
 

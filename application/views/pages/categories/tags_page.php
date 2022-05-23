@@ -23,6 +23,7 @@
     <div class="context">
       <a class="link" href="#what_is_a_tag">What is a tag?</a>
       <a class="link" href="#what_are_comments">What are comments and how do I create a comment?</a>
+      <a class="link" href="#browser_support">Browser support</a>
       <a class="link" href="#list_of_tags">List of tags</a>
       <a class="link" href="#quizzes_title">Quizzes</a>
     </div>
@@ -40,6 +41,35 @@
     <code style="color: #2cde5f;">
       &lt;!-- This is an example comment. --&gt;
     </code>
+
+    <h2 id="browser_support">Browser Support:</h2>
+    <table>
+      <tr>
+        <th>Browser</th>
+        <th>Supported</th>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Edge</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Firefox</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Internet Explorer</td>
+        <td>IE 9 and higher</td>
+      </tr>
+    </table>
+
     <h2 id="list_of_tags">List of tags:</h2>
     <table>
       <tr>
@@ -75,12 +105,23 @@
         <td>Contains information about data, such as: title, character sets etc. This is usually located within the head tag.</td>
       </tr>
     </table>
+
+    <div style="margin-top: 5px">
+      <a href="/categories/references#list_of_tags" class="link">View more...</a>
+    </div>
+
+
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
       <a href="/quizzes/identify_tags">Identifying tags and their structure</a>
     </div>
-    <a href="#header" class="link">Back To Top</a>
-    <a href="/categories/attributes" class="link bordered" > Next Category (Attributes)</a>
+
+    <div style="display: flex; flex-wrap: wrap">
+      <a style="margin-right: 5px" href="#header" class="link">Back To Top</a>
+      <a href="/categories/attributes" class="link bordered">Next Category (Attributes)</a>
+      <a style="margin-left: auto" href="/dashboard" class="link" > Back to Dashboard</a>
+    </div>
+
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>
@@ -90,5 +131,3 @@
   </script>
 </body>
 </html>
-
-

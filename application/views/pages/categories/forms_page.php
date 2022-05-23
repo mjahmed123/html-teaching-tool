@@ -22,6 +22,8 @@
     <h1>Context</h1>
     <div class="context">
       <a class="link" href="#what_are_forms">What are forms?</a>
+      <a class="link" href="#how_does_it_work">How does it work?</a>
+      <a class="link" href="#browser_support">Browser support</a>
       <a class="link" href="#list_of_form_attributes">List of form attributes</a>
       <a class="link" href="#quizzes_title">Quizzes</a>
     </div>
@@ -30,21 +32,118 @@
 		
     <h3>Example:</h3>
 
-    <pre><code class="language-html" style="margin: 0; padding: 10px">&lt;form&gt;
-  &lt;label for="name"&gt;Your full name:&lt;/label&gt;
-  &lt;input type="text" name="name" id="name"&gt;
+    <h4>index.html</h4>
 
-  &lt;label&gt;Select your gender:&lt;/label&gt;
+    <pre><code class="language-html" style="margin: 0; padding: 10px">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Example Form&lt;/title&gt;
+  &lt;link rel="stylesheet" href="main.css"&gt;
+&lt;/head&gt;
 
-  &lt;input type="radio" id="gender" name="gender" value="male"&gt;
-  &lt;label for="gender"&gt;Male&lt;/label&gt;
-  &lt;input type="radio" id="gender" name="gender" value="female"&gt;
-  &lt;label for="gender"&gt;Female&lt;/label&gt;
+&lt;body&gt;
 
-  &lt;label for="hobbies"&gt;Please choose the hobbies that apply to you:&lt;/label&gt;
+  &lt;form&gt;
+    &lt;h2&gt;Example Form&lt;/h2&gt;
 
-  &lt;input type="check" id="hobbies" name="hobbies" value=""
-&lt;/form&gt;</code></pre>
+    &lt;h3&gt;Name&lt;/h3&gt;
+
+    &lt;label for="name"&gt;Your full name:&lt;/label&gt;
+    &lt;input type="text" name="name" id="name"&gt;
+
+    &lt;h3&gt;Gender&lt;/h3&gt;
+
+    &lt;label&gt;Select your gender:&lt;/label&gt;
+
+    &lt;div class="gender"&gt;
+      &lt;input type="radio" id="male" name="gender" value="male"&gt;
+      &lt;label for="male"&gt;Male&lt;/label&gt;
+      &lt;input type="radio" id="female" name="gender" value="female"&gt;
+      &lt;label for="female"&gt;Female&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt;Hobbies&lt;/h3&gt;
+
+    &lt;label for="hobbies"&gt;Please choose the hobbies that apply to you:&lt;/label&gt;
+
+    &lt;div class="hobbies"&gt;
+      &lt;div class="sports"&gt;
+        &lt;input type="check" id="sports" name="hobbies" value="sports"&gt;
+        &lt;label for="sports"&gt;Sports&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="programming"&gt;
+        &lt;input type="check" id="programming" name="hobbies" value="programming"&gt;
+        &lt;label for="programming"&gt;Programming&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="gaming"&gt;
+        &lt;input type="check" id="gaming" name="hobbies" value="gaming"&gt;
+        &lt;label for="gaming"&gt;Gaming&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class="none"&gt;
+        &lt;input type="check" id="none" name="hobbies" value="none"&gt;
+        &lt;label for="none"&gt;None of the above&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;input type="submit" id="submit" name="submit" value="Complete Form"&gt;
+  &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h4>main.css</h4>
+
+    <pre ><code class="language-css" style="margin: 0; padding: 10px">body, html {
+  margin: 0;
+  font-family: Arial;
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+h3 {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+input[type=text] {
+  width: 85%; 
+  margin-right: 20px; 
+  max-width: 180px;
+}
+
+.gender {
+  display: block;
+  margin-top: 10px;
+}
+
+.hobbies {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+}
+</code></pre>
+
+    <h4 id="how_does_it_work">How does it work?</h4>
+    <ul style="list-style-type: circle; margin-left: -10px">
+      <li><p>The <code>index.html</code> file creates a document that creates an example form with the following aesthetic:</p></li>
+      <ul style="list-style-type: disc; margin-left: -10px">
+        <li><p>A main <code>header</code> titled <code>Example Form</code>.</p></li>
+        <li><p>Three subheadings for each of the different sections.</p></li>
+        <li><p>Input elements (i.e. radio button, checkbox, textbox and submit button).</p></li>
+        <li><p>Once the form has been fully submitted, a pop up message will appear. Confirming that the form has been completed.</p></li>
+      </ul>
+    </ul>
+
+    <h4>What does each input element do?</h4>
+    <ul style="list-style-type: circle; margin-left: -10px">
+      <li><p><code>Radio Button</code> is an element that allows you to only select one option out of a range of options.</p></li>
+      <li><p><code>Textbox</code> is an element that allows you to input information into a field.</p></li>
+      <li><p><code>Checkboxes</code> is an element that allows you to select multiple options simultaneously.</p></li>
+      <li><p><code>Submit Button</code> is an element that allows you to send the data from a form to another file or server for processing.</p></li>
+    </ul>
 
     <h3 id="output">Output:</h3>
     <code style="display: inline-block; width: 85%">
@@ -107,47 +206,84 @@
         </script>
     </code>
     
-    <h2 id="list_of_form_attributes">List of form attributes:</h2>
+    <h2 id="browser_support">Browser Support:</h2>
     <table>
       <tr>
-        <th>Tag</th>
+        <th>Browser</th>
+        <th>Supported</th>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Edge</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Firefox</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Internet Explorer</td>
+        <td>IE 9 and higher</td>
+      </tr>
+    </table>
+
+    <h2 id="list_of_form_attributes">List of form attributes:</h2>
+    <table>
+    <tr>
+        <th>Form Attribute</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>html</td>
-        <td>Root element of a html document and has all other tags contained within it.</td>
+        <td>action</td>
+        <td>Attribute used to specify where data should should be sent to be processed when submitting a form.</td>
       </tr>
       <tr>
-        <td>head</td>
-        <td>Contains the metadata of a webpage (not displayed to the user), data such as: title, character sets, styles etc.</td>
+        <td>autocomplete</td>
+        <td>Attribute used specify whether a form should enable autocomplete or not.</td>
       </tr>
       <tr>
-        <td>header</td>
-        <td>Contains information as an introduction to the webpage or is more typically to include the navigation menu of the webpage.</td>
+        <td>enctype</td>
+        <td>Attribute used to define what encoding type is to be used when data is sent to the server, usually used for post methods (i.e. <code>method="post"</code>.</td>
       </tr>
       <tr>
-        <td>body</td>
-        <td>Element where all other tags are enclosed between the starting and closing tags, some of which can be found in this table (i.e. paragraphs, tables, hyperlinks, images etc).</td>
+        <td>method</td>
+        <td>Attribute used to define which type of HTTP method to be used when form date is submitted (i.e. <code>POST, GET</code>.</td>
       </tr>
       <tr>
-        <td>footer</td>
-        <td>Element used to indicate the end of the document and usually contains copyright, authorship and contact information.</td>
+        <td>name</td>
+        <td>Attribute used to specify the name of the form within a document.</td>
       </tr>
       <tr>
-        <td>title</td>
-        <td>Element used to define the title of the webpage that can be viewed on the web browser's tab bar title. This is also used when searching for the website in a search engine in its results page.</td>
+        <td>rel</td>
+        <td>Attribute used to define the relationship between the current form and the linked source/documment.</td>
       </tr>
       <tr>
-        <td>meta</td>
-        <td>Contains information about data, such as: title, character sets etc. This is usually located within the head tag.</td>
+        <td>novalidate</td>
+        <td>Attribute used to specify whether or not the form should be validated upon submitting.</td>
       </tr>
     </table>
+
+    <div style="margin-top: 5px">
+      <a href="/categories/references#list_of_form_attributes" class="link">View more...</a>
+    </div>
+
     <h2 id="quizzes_title">Test Your Knowledge:</h2>
     <div class="quizzes">
-      <a href="/quizzes/identify_tags">Identifying and defining atttributes within elements</a>
+      <a href="/quizzes/identify_forms">Identifying forms, their attributes and elements</a>
     </div>
-    <a href="#header" class="link">Back To Top</a>
-    <a href="/categories/media" class="link bordered" > Next Category (Media)</a>
+    
+    <div style="display: flex; flex-wrap: wrap">
+      <a style="margin-right: 5px" href="#header" class="link">Back To Top</a>
+      <a href="/categories/styles" class="link bordered">Previous Category (Styles)</a>
+      <a style="margin-left: auto" href="/categories/media" class="link">Next Category (Media)</a>
+    </div>
 
   </div>
 	<?php $this->load->view('templates/footer'); ?>

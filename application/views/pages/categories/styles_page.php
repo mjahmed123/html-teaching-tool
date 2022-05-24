@@ -19,7 +19,7 @@
 <body>
 	<?php $this->load->view('templates/header'); ?>
 	<div class="container category">
-    <h1>Context</h1>
+    <h1 class="context-title">Context</h1>
     <div class="context">
       <a class="link" href="#what_are_styles">What are styles?</a>
       <a class="link" href="#internal_styling">Types of styles</a>

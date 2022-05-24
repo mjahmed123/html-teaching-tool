@@ -19,7 +19,7 @@
 <body>
 	<?php $this->load->view('templates/header'); ?>
 	<div class="container category">
-    <h1>Context</h1>
+    <h1 class="context-title">Context</h1>
     <div class="context">
       <a class="link" href="#what_is_a_tag">What is a tag?</a>
       <a class="link" href="#what_are_comments">What are comments and how do I create a comment?</a>

@@ -19,7 +19,7 @@
 <body>
 	<?php $this->load->view('templates/header'); ?>
 	<div class="container category">
-    <h1>Context</h1>
+    <h1 class="context-title">Context</h1>
     <div class="context">
       <a class="link" href="#what_is_an_attribute">What is an attribute?</a>
       <a class="link" href="#browser_support">Browser support</a>

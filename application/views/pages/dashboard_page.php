@@ -55,7 +55,7 @@
 <body>
 	<?php $this->load->view('templates/header'); ?>
 	<div class="container dashboard">
-		<h1>Select a category:</h1>
+		<h1 class="dashboard-title">Select a category:</h1>
 		<div class="categories">
 			<a href="/categories/tags" title="This is the tags category, with the icon of a HTML tag (<>)." class="category">
 				<div class="material-icons">code</div>

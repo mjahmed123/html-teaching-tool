@@ -105,3 +105,15 @@ header .button:hover::before {
 .header-profile .button:hover {
   opacity: 1;
 }
+
+@media (max-width: 425px) {
+  .header-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 300px) {
+  .header-title {
+    font-size: 14px;
+  }
+}

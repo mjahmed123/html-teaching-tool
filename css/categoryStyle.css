@@ -81,3 +81,13 @@ th {
   border-left: solid 1px black;
   padding-left: 5px;
 }
+
+@media (max-width: 425px) {
+  .context-title {
+    font-size: 24px;
+  }
+
+  .context .link {
+    font-size: 18px;
+  }
+}

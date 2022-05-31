@@ -3,6 +3,10 @@ html, body {
   color: white;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 .quiz #textInput {
   background: rgb(53, 53, 53);
   color: white;

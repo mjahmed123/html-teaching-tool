@@ -22,9 +22,9 @@ git clone https://github.com/mjahmed123/html-teaching-tool.git
 Setup is complete. You can visit https://localhost to explore the website.
 
 # Features
-• Quizzes with varied difficulty as you progress through the categories.
-• Dark/light mode.
-• Categories with thorough amounts of detail. 
+- Quizzes with varied difficulty as you progress through the categories.
+- Dark/light mode.
+- Categories with thorough amounts of detail. 
 
 # Libraries Used
 1. Highlight.js - Used to highlight syntax code blocks.

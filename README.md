@@ -1,6 +1,8 @@
 # HTML Teaching Tool
 An interactive tool for teaching students HTML.
 
+Link to this repo: https://github.com/mjahmed123/html-teaching-tool
+
 # Setup
 Clone this repository by running the following command:
 ```
